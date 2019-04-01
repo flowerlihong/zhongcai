@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>RAIO_DEMO</title>
+    <link rel="stylesheet" type="text/css" href="./static/css/reset.css">
+    <link rel="stylesheet" type="text/css" href="./static/css/public.css">
+    <script src="./modules/main.js"></script>
+    <script>
+        //防止页面后退
+        history.pushState(null, null, document.URL);
+        window.addEventListener('popstate', function () {
+            history.pushState(null, null, document.URL);
+        });
+    </script>
+</head>
+
+<body>
+    <div id="raio_app" class="home">
+        <header>
+            <div class="left" id="TimeDate"></div>
+            <h1>广州奔想智能科技有限公司 自助一体机 BX-ZWJ-001
+                <span>2018-09-29</span>
+            </h1>
+            <div class="right">RAIO版本：
+                <span id="ver"></span>
+            </div>
+        </header>
+        <section>
+            <article class="system">
+                <div class="qrCode clearfix">
+                    <div class="wrap">
+                        <img src="./static/img/qr01.png">
+                        <span>微信公众号</span>
+                    </div>
+                    <div class="wrap">
+                        <img src="./static/img/qr02.png">
+                        <span>官方网站</span>
+                    </div>
+                </div>
+                <div class="function">
+                    <ul>
+                        <li>
+                            <a href="./view/dataStore.html">
+                                <img src="./static/img/icon/icon_a.png">
+                                <span>数据储存</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0)" onclick="empty()">
+                                <img src="./static/img/icon/icon_b.png">
+                                <span>清除浏览器缓存</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="./view/errUpload.html">
+                                <img src="./static/img/icon/icon_e.png">
+                                <span>异常上报</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="./view/pcInfo.html">
+                                <img src="./static/img/icon/icon_c.png">
+                                <span>设备信息</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0)" onclick="exit()">
+                                <img src="./static/img/icon/icon_d.png">
+                                <span>退出系统</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </article>
+            <article class="module">
+                <div class="IEscrollbar">
+                    <ul class="clearfix">
+                        <li>
+                            <a href="http://zwtest.benxiangai.com/net/zwwindow/zwjdemo/index.html">
+                                <img src="./static/img/icon/icon_00.png">
+                                <span>Demo V1</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="./view/minPrinter.html">
+                                <img src="./static/img/icon/icon_01.png">
+                                <span>热敏打印</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="./view/maxPrinter.html">
+                                <img src="./static/img/icon/icon_02.png">
+                                <span>激光打印</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="./view/fingerprintRead.html">
+                                <img src="./static/img/icon/icon_03.png">
+                                <span>指纹识别</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="./view/takingPictures.html">
+                                <img src="./static/img/icon/icon_04.png">
+                                <span>高拍仪</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="./view/idRead.html">
+                                <img src="./static/img/icon/icon_05.png">
+                                <span>身份证</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="./view/keyDoard.html">
+                                <img src="./static/img/icon/icon_06.png">
+                                <span>金属键盘</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="./view/unionpayCARDS.html">
+                                <img src="./static/img/icon/icon_07.png">
+                                <span>银行卡</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="./view/soundRecognition.html">
+                                <img src="./static/img/icon/icon_08.png">
+                                <span>语音识别/播放</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="./view/inputMethod.html">
+                                <img src="./static/img/icon/icon_09.png">
+                                <span>输入法</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="./view/qrCodeScan.html">
+                                <img src="./static/img/icon/icon_10.png">
+                                <span>二维码模块</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="./view/RFID.html">
+                                <img src="./static/img/icon/icon_11.png">
+                                <span>RFID</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="./view/faceRecognition.html">
+                                <img src="./static/img/icon/icon_12.png">
+                                <span>人脸识别</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="./view/penSigner.html">
+                                <img src="./static/img/icon/icon_13.png">
+                                <span>签名板</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="./view/SINCard.html">
+                                <img src="./static/img/icon/icon_14.png">
+                                <span>社保卡</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="./view/OCRCard.html">
+                                <img src="./static/img/icon/icon_15.png">
+                                <span>文字识别</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="./view/referVein.html">
+                                <img src="./static/img/icon/icon_16.png">
+                                <span>指静脉仪</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="./view/screen/mainIndex.html">
+                                <img src="./static/img/icon/icon_17.png">
+                                <span>分屏共享</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="./view/locker.html">
+                                <img src="./static/img/icon/icon_18.png">
+                                <span>储物柜模块</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="./view/cardSender.html">
+                                <img src="./static/img/icon/icon_19.png">
+                                <span>发卡机模块</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="./view/Infrared.html">
+                                <img src="./static/img/icon/icon_20.png">
+                                <span>人体检测模块</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="./view/CardPrinter.html">
+                                <img src="./static/img/icon/icon_21.png">
+                                <span>证卡打印</span>
+                            </a>
+                        </li>
+                        <!-- <li>
+                            <a href="./view/UnionPay.html">
+                                <img src="./static/img/icon/icon_22.png">
+                                <span>银联支付</span>
+                            </a>
+                        </li> -->
+                        <li>
+                            <a href="./view/passportRead.html">
+                                <img src="./static/img/icon/icon_24.png">
+                                <span>护照仪</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </article>
+        </section>
+        <footer>
+
+        </footer>
+    </div>
+    <script src="./static/js/app.js"></script>
+    <script>
+        /* 清空浏览器缓存 */
+        function empty() {
+            clear_cache();
+            Toast('res', '清除成功');
+        }
+        /* 退出系统 */
+        function exit() {
+            RAIO_close();
+        }
+        /* 左上角日期时间 */
+        var oTimeDate = document.querySelector("#TimeDate");
+        oTimeDate.innerHTML = update_time(new Date(), "yyyy-mm-dd HH-mm-ss");
+        setInterval(function () {
+            oTimeDate.innerHTML = update_time(new Date(), "yyyy-mm-dd HH-mm-ss");
+        }, 1000);
+
+        /* 获取设备信息 */
+        window.onload = get_PCInfo();
+
+        function get_PCInfo() {
+            try {
+                var info = get_info();
+                info = JSON.parse(info);
+                document.querySelector("#ver").innerHTML = info.Ver;
+            } catch (e) {
+            　　console.log('请在RAIO上运行')
+            }
+        }
+    </script>
+</body>
+
+</html>
